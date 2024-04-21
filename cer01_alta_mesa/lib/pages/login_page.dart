@@ -9,6 +9,7 @@ class login_page extends StatelessWidget {
   Widget build(BuildContext context) {
     
     return Scaffold(
+      resizeToAvoidBottomInset: false, // Fix a bottom overflow en teclado
       appBar: AppBar(
         centerTitle: true,
         
