@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     ]);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'High Table',
       theme: ThemeData(
         // This is the theme of your application.
         //

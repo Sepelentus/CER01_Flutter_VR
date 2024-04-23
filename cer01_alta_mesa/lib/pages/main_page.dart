@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:cer01_alta_mesa/pages/contract_page.dart';
 import 'package:cer01_alta_mesa/pages/login_page.dart';
 import 'package:cer01_alta_mesa/pages/profile_page.dart';
 import 'package:cer01_alta_mesa/widgets/menu_card.dart';
@@ -135,12 +136,17 @@ class MainPage extends StatelessWidget {
               
 
               // Tarjetas de menu
-              MenuCard(
-                  width: screenSize.width * 0.7,
-                  top: screenSize.height * 0.275,
-                  nombre_servicio: 'Ver contrato',
-                  descripcion1: 'Objetivo: Eduardo Olivares',
-                  descripcion2: 'Monto: 35.000.000 CLP'),
+              InkWell(
+                child: MenuCard(
+                    width: screenSize.width * 0.7,
+                    top: screenSize.height * 0.275,
+                    nombre_servicio: 'Ver contrato',
+                    descripcion1: 'Objetivo: Eduardo Olivares',
+                    descripcion2: 'Monto: 35.000.000 CLP'),
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => ContractPage()));
+                },
+              ),
               MenuCard(
                   width: screenSize.width * 0.7,
                   top: screenSize.height * 0.4275,
