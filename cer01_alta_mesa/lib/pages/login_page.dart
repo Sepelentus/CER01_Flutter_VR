@@ -12,7 +12,7 @@ class login_page extends StatelessWidget {
       resizeToAvoidBottomInset: false, // Fix a bottom overflow en teclado
       appBar: AppBar(
         centerTitle: true,
-        
+        automaticallyImplyLeading: false,
         title: Padding(
           padding: EdgeInsets.only(top: 25),
           child: Text('Login', style: GoogleFonts.robotoSlab()),

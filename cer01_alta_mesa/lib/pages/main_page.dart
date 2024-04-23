@@ -1,5 +1,7 @@
 import 'dart:ui';
 
+import 'package:cer01_alta_mesa/pages/login_page.dart';
+import 'package:cer01_alta_mesa/pages/profile_page.dart';
 import 'package:cer01_alta_mesa/widgets/menu_card.dart';
 import 'package:flutter/material.dart';
 
@@ -156,35 +158,40 @@ class MainPage extends StatelessWidget {
                 alignment: Alignment.bottomLeft,
                 child: Padding(
                   padding: EdgeInsets.only(bottom: screenSize.height * 0.1, left: screenSize.width * 0.05),
-                  child: Container(
-                    width: screenSize.width * 0.4,
-                    height: 52,
-                    clipBehavior: Clip.antiAlias,
-                    decoration: BoxDecoration(
-                      color: Color(0x99111111),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Color(0x7F000000),
-                          blurRadius: 4,
-                          offset: Offset(4, 4),
-                          spreadRadius: 0,
+                  child: InkWell(
+                    child: Container(
+                      width: screenSize.width * 0.4,
+                      height: 52,
+                      clipBehavior: Clip.antiAlias,
+                      decoration: BoxDecoration(
+                        color: Color(0x99111111),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Color(0x7F000000),
+                            blurRadius: 4,
+                            offset: Offset(4, 4),
+                            spreadRadius: 0,
+                          )
+                        ],
+                      ),
+                      child: Stack(
+                      children: [
+                        ListTile(
+                          title: Text('Editar perfil', style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 15,
+                                  fontFamily: 'Roboto Slab',
+                                  fontWeight: FontWeight.w400,
+                                  height: 0,
+                                ),),
+                          leading: Icon(Icons.person),
                         )
                       ],
                     ),
-                    child: Stack(
-                    children: [
-                      ListTile(
-                        title: Text('Editar perfil', style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 15,
-                                fontFamily: 'Roboto Slab',
-                                fontWeight: FontWeight.w400,
-                                height: 0,
-                              ),),
-                        leading: Icon(Icons.person),
-                      )
-                    ],
-                  ),
+                    ),
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => ProfilePage()));
+                    },
                   ),
                 ),
               ),
@@ -237,7 +244,7 @@ class MainPage extends StatelessWidget {
                         ListTile(
                           title: Text('Cerrar sesion', style: TextStyle(
                                   color: Colors.white,
-                                  fontSize: 14,
+                                  fontSize: 12,
                                   fontFamily: 'Roboto Slab',
                                   fontWeight: FontWeight.w400,
                                   height: 0,
@@ -249,6 +256,7 @@ class MainPage extends StatelessWidget {
                     ),
                     onTap: () {
                       print('Tapped "Cerrar sesion"');
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => login_page()));
                     },
                   ),
                 ),
