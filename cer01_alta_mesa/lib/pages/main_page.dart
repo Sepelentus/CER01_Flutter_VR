@@ -1,8 +1,10 @@
 import 'dart:ui';
 
 import 'package:cer01_alta_mesa/pages/contract_page.dart';
+import 'package:cer01_alta_mesa/pages/hotels_page.dart';
 import 'package:cer01_alta_mesa/pages/login_page.dart';
 import 'package:cer01_alta_mesa/pages/profile_page.dart';
+import 'package:cer01_alta_mesa/pages/services_page.dart';
 import 'package:cer01_alta_mesa/widgets/menu_card.dart';
 import 'package:flutter/material.dart';
 
@@ -136,29 +138,40 @@ class MainPage extends StatelessWidget {
               
 
               // Tarjetas de menu
-              InkWell(
-                child: MenuCard(
-                    width: screenSize.width * 0.7,
-                    top: screenSize.height * 0.275,
-                    nombre_servicio: 'Ver contrato',
-                    descripcion1: 'Objetivo: Eduardo Olivares',
-                    descripcion2: 'Monto: 35.000.000 CLP'),
-                onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => ContractPage()));
-                },
-              ),
+              MenuCard(
+                  width: screenSize.width * 0.7,
+                  top: screenSize.height * 0.275,
+                  nombre_servicio: 'Ver contrato',
+                  descripcion1: 'Objetivo: Eduardo Olivares',
+                  descripcion2: 'Monto: 35.000.000 CLP',
+                  onTap: () {
+                    print('ContractPage()');
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => ContractPage()));
+                  },
+                ),
               MenuCard(
                   width: screenSize.width * 0.7,
                   top: screenSize.height * 0.4275,
                   nombre_servicio: 'Servicios disponibles',
                   descripcion1: 'Encargado: Karan Soni',
-                  descripcion2: 'Tipo servicio: Limpieza'),
+                  descripcion2: 'Tipo servicio: Limpieza',
+                  onTap: () {
+                    print('ServicesPage()');
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => ServicesPage()));
+                  },  
+              ),
               MenuCard(
                   width: screenSize.width * 0.7,
                   top: screenSize.height * 0.585,
                   nombre_servicio: 'Hoteles disponibles',
                   descripcion1: 'Nombre: Lorem Ipsum',
-                  descripcion2: 'Ubicacion: Valparaiso, Chile'),
+                  descripcion2: 'Ubicacion: Valparaiso, Chile',
+                  onTap: () {
+                    print('HotelesPage()');
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => HotelsPage()));
+                  },  
+                ),
+
 
               Align(
                 alignment: Alignment.bottomLeft,
