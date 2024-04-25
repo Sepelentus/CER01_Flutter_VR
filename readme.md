@@ -2,8 +2,6 @@ Flutter based application based on the High Table from the John Wick Series
 
 This was done for a test in University
 
-Here are some images from the development along the required dependencies in case any error happens and cannot run because the dependencies
-
 CMD:
 > flutter pub add google_fonts
 
