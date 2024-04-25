@@ -65,7 +65,7 @@ class MenuCard extends StatelessWidget {
                         left: 14,
                         top: 38,
                         child: SizedBox(
-                          width: 196,
+                          width: 250,
                           height: 16,
                           child: Text(
                             '${this.descripcion1}',
@@ -75,6 +75,7 @@ class MenuCard extends StatelessWidget {
                               fontFamily: 'Roboto Slab',
                               fontWeight: FontWeight.w400,
                               height: 0,
+                              overflow: TextOverflow.ellipsis
                             ),
                           ),
                         ),
@@ -83,7 +84,7 @@ class MenuCard extends StatelessWidget {
                         left: 14,
                         top: 54,
                         child: SizedBox(
-                          width: 200,
+                          width: 250,
                           height: 16,
                           child: Text(
                             '${this.descripcion2}',
@@ -93,6 +94,7 @@ class MenuCard extends StatelessWidget {
                               fontFamily: 'Roboto Slab',
                               fontWeight: FontWeight.w400,
                               height: 0,
+                              overflow: TextOverflow.ellipsis
                             ),
                           ),
                         ),

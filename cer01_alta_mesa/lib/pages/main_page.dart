@@ -153,8 +153,8 @@ class MainPage extends StatelessWidget {
                   width: screenSize.width * 0.7,
                   top: screenSize.height * 0.4275,
                   nombre_servicio: 'Servicios disponibles',
-                  descripcion1: 'Encargado: Karan Soni',
-                  descripcion2: 'Tipo servicio: Limpieza',
+                  descripcion1: 'Encargados Disponibles: Charlie, Sommelier, Seamstress, Cartographer',
+                  descripcion2: 'Tipo servicio: Limpieza, Armamento, Vestimenta, Cartografia',
                   onTap: () {
                     print('ServicesPage()');
                     Navigator.push(context, MaterialPageRoute(builder: (context) => ServicesPage()));

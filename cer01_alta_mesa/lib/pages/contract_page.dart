@@ -20,7 +20,7 @@ class ContractPage extends StatelessWidget {
         toolbarOpacity: 1,
         centerTitle: true,
         elevation: 0,
-        foregroundColor: Colors.black,
+        foregroundColor: Color.fromARGB(255, 255, 255, 255),
         backgroundColor: Colors.transparent,
       ),
       body: Container(
@@ -40,6 +40,7 @@ class ContractPage extends StatelessWidget {
                 ),
                 child: BackdropFilter(
                   filter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
+                  blendMode: BlendMode.darken,
                   child: Container(
                     decoration:
                         BoxDecoration(color: Colors.white.withOpacity(0.0)),
@@ -290,39 +291,44 @@ class ContractPage extends StatelessWidget {
                 padding: EdgeInsets.only(
                     right: screenSize.width * 0.05,
                     bottom: screenSize.height * 0.02),
-                child: Container(
-                  width: screenSize.width * 0.6,
-                  height: 50,
-                  clipBehavior: Clip.antiAlias,
-                  decoration: BoxDecoration(
-                    color: Color(0x99111111),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Color(0x7F000000),
-                        blurRadius: 4,
-                        offset: Offset(4, 4),
-                        spreadRadius: 0,
-                      )
-                    ],
-                  ),
-                  child: Stack(
-                    children: [
-                      ListTile(
-                        title: Text(
-                          'Ultima localizacion conocida',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 11,
-                            fontFamily: 'Roboto Slab',
-                            fontWeight: FontWeight.w400,
-                            height: 0,
+                child: InkWell(
+                  child: Container(
+                    width: screenSize.width * 0.6,
+                    height: 50,
+                    clipBehavior: Clip.antiAlias,
+                    decoration: BoxDecoration(
+                      color: Color(0x99111111),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Color(0x7F000000),
+                          blurRadius: 4,
+                          offset: Offset(4, 4),
+                          spreadRadius: 0,
+                        )
+                      ],
+                    ),
+                    child: Stack(
+                      children: [
+                        ListTile(
+                          title: Text(
+                            'Ultima localizacion conocida',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 11,
+                              fontFamily: 'Roboto Slab',
+                              fontWeight: FontWeight.w400,
+                              height: 0,
+                            ),
                           ),
-                        ),
-                        leading: Icon(Icons.map),
-                        iconColor: Colors.white,
-                      )
-                    ],
+                          leading: Icon(Icons.map),
+                          iconColor: Colors.white,
+                        )
+                      ],
+                    ),
                   ),
+                  onTap: () {
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Actualizado el mapa')));
+                  },
                 ),
               ),
             ),
