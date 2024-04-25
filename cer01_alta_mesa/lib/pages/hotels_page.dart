@@ -110,7 +110,7 @@ const HotelsPage({ Key? key }) : super(key: key);
                   child: Stack(
                     children: [
                       Positioned(
-                        left: 14,
+                        left: screenSize.width * 0.03,
                         top: 20,
                         child: SizedBox(
                           width: 160,
@@ -123,6 +123,28 @@ const HotelsPage({ Key? key }) : super(key: key);
                               fontFamily: 'Roboto Slab',
                               fontWeight: FontWeight.w400,
                               height: 0,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left: screenSize.width * 0.4,
+                        top: 20,
+                        child: SizedBox(
+                          width: 150,
+                          height: screenSize.height * 0.15,
+                          child: Container(
+                            decoration: ShapeDecoration(
+                              image: DecorationImage(
+                                image: AssetImage("assets/images/map_hotel1.png"),
+                                fit: BoxFit.fill,
+                              ),
+                              shape: BeveledRectangleBorder(
+                                side: BorderSide(
+                                  color: Colors.black,
+                                  width: 1.5,
+                                )
+                              )
                             ),
                           ),
                         ),
@@ -157,7 +179,7 @@ const HotelsPage({ Key? key }) : super(key: key);
                   child: Stack(
                     children: [
                       Positioned(
-                        left: 14,
+                        left: screenSize.width * 0.03,
                         top: 20,
                         child: SizedBox(
                           width: 160,
@@ -170,6 +192,28 @@ const HotelsPage({ Key? key }) : super(key: key);
                               fontFamily: 'Roboto Slab',
                               fontWeight: FontWeight.w400,
                               height: 0,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left: screenSize.width * 0.4,
+                        top: 20,
+                        child: SizedBox(
+                          width: 150,
+                          height: screenSize.height * 0.15,
+                          child: Container(
+                            decoration: ShapeDecoration(
+                              image: DecorationImage(
+                                image: AssetImage("assets/images/map_hotel2.png"),
+                                fit: BoxFit.fill,
+                              ),
+                              shape: BeveledRectangleBorder(
+                                side: BorderSide(
+                                  color: Colors.black,
+                                  width: 1.5,
+                                )
+                              )
                             ),
                           ),
                         ),
@@ -204,19 +248,41 @@ const HotelsPage({ Key? key }) : super(key: key);
                   child: Stack(
                     children: [
                       Positioned(
-                        left: 14,
+                        left: screenSize.width * 0.03,
                         top: 20,
                         child: SizedBox(
                           width: 160,
                           height: screenSize.height * 0.15,
                           child: Text(
-                            'Ubicacion:\nQuilpue, Quilpue\n\nCoordenadas:\n--33.04863042127397, -71.43352103913767\n\nServicios disponibles:\nCartografia',
+                            'Ubicacion:\nQuilpue, Quilpue\n\nCoordenadas:\n-33.04863042127397, -71.43352103913767\n\nServicios disponibles:\nCartografia',
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 12,
                               fontFamily: 'Roboto Slab',
                               fontWeight: FontWeight.w400,
                               height: 0,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left: screenSize.width * 0.4,
+                        top: 20,
+                        child: SizedBox(
+                          width: 150,
+                          height: screenSize.height * 0.15,
+                          child: Container(
+                            decoration: ShapeDecoration(
+                              image: DecorationImage(
+                                image: AssetImage("assets/images/map_hotel3.png"),
+                                fit: BoxFit.fill,
+                              ),
+                              shape: BeveledRectangleBorder(
+                                side: BorderSide(
+                                  color: Colors.black,
+                                  width: 1.5,
+                                )
+                              )
                             ),
                           ),
                         ),
